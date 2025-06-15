@@ -15,7 +15,7 @@ Spartan HUD is an open-source project.
 ## Contributing Code
 
 1. **Create a Pull Request**: Make a pull request (PR) early using GitHub's draft feature. Describe what the PR does and how it solves the issue.
-2. **Follow Guidelines**: Adhere to our [Development Guidelines](https://github.com/TenuredCLOUD/Spartan_HUD/blob/main/.github/pull_request_template.md).
+2. **Follow Guidelines**: Adhere to our [Development Guidelines](https://github.com/TenuredCLOUD/Spartan/blob/main/.github/pull_request_template.md).
 
 ## Notes
 
