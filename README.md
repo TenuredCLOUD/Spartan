@@ -1,10 +1,10 @@
 <p align="center">
-    <img src="https://github.com/TenuredCLOUD/Spartan/blob/5bd3760486c5aafddca074dbba98186ce364859b/banners/SpartanLogo.png#gh-light-mode-only" width="480">
-    <img src="https://github.com/TenuredCLOUD/Spartan/blob/5bd3760486c5aafddca074dbba98186ce364859b/banners/SpartanLogo.png#gh-dark-mode-only" width="480">
+    <img src="https://github.com/TenuredCLOUD/Spartan/blob/main/banners/SpartanLogo.png#gh-light-mode-only" width="480">
+    <img src="https://github.com/TenuredCLOUD/Spartan/blob/main/banners/SpartanLogo.png#gh-dark-mode-only" width="480">
 </p>
 
 <p align="center">
-    <a href="https://github.com/TenuredCLOUD/Spartan/blob/b018a7a7aba6b1e8021ce4312b35fb9f2357b94c/LICENSE.txt">
+    <a href="https://github.com/TenuredCLOUD/Spartan/blob/main/LICENSE.txt">
     <img src="https://img.shields.io/badge/License-GPLv2-orange.svg?style=flat-square" alt="Spartan HUD License">
     </a>
 </p>
