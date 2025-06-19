@@ -13,28 +13,30 @@
  * [] call spartan_common_fnc_processHud
 */
 
-QGVAR(display) cutRsc [QUOTE(spartan_hud), "PLAIN", 1, false];
+[{CBA_missionTime > 1}, {
 
-[{
-    params ["_args", "_handle"];
+    QGVAR(display) cutRsc [QUOTE(spartan_hud), "PLAIN", 1, false];
 
-    if (!alive player) exitWith {};
+    [{
+        params ["_args", "_handle"];
 
-    call FUNC(getStance) params ["_icon", "_value"];
-    call FUNC(getCalculatedNoise) params ["_noiseValue"];
+        if (!alive player) exitWith {};
 
-    private _display = uiNamespace getVariable [QUOTE(spartan_ui), objNull];
+        call FUNC(getStance) params ["_icon", "_value"];
+        call FUNC(getCalculatedNoise) params ["_noiseValue"];
 
-    private _stanceIcon = _display displayCtrl 1200;
-    private _stanceBar = _display displayCtrl 1000;
-    private _soundBar = _display displayCtrl 1001;
-    private _fatigueBar = _display displayCtrl 1002;
+        private _display = uiNamespace getVariable [QUOTE(spartan_ui), objNull];
 
-    _stanceIcon ctrlSetText _icon;
-    _stanceBar progressSetPosition _value;
-    _soundBar progressSetPosition _noiseValue;
+        private _stanceIcon = _display displayCtrl 1200;
+        private _stanceBar = _display displayCtrl 1000;
+        private _soundBar = _display displayCtrl 1001;
+        private _fatigueBar = _display displayCtrl 1002;
 
-    private _fatigueValue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
-    _fatigueBar progressSetPosition (1 - (_fatigueValue));
-}, 0] call CBA_fnc_addPerFrameHandler;
+        _stanceIcon ctrlSetText _icon;
+        _stanceBar progressSetPosition _value;
+        _soundBar progressSetPosition _noiseValue;
 
+        private _fatigueValue = [getFatigue player, player getVariable ["ace_advanced_fatigue_aimFatigue", 0]] select (!isNil "ace_advanced_fatigue_enabled" && {ace_advanced_fatigue_enabled});
+        _fatigueBar progressSetPosition (1 - (_fatigueValue));
+    }, 0] call CBA_fnc_addPerFrameHandler;
+}, []] call CBA_fnc_waitUntilAndExecute;

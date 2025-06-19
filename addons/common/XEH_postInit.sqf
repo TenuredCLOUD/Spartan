@@ -1,6 +1,8 @@
 #include "script_component.hpp"
 
-if (hasInterface) then {
-    call FUNC(processHud);
-};
+if !(hasInterface) exitWith {};
 
+onPreloadFinished {
+    call FUNC(processHud);
+    onPreloadFinished "";
+};
